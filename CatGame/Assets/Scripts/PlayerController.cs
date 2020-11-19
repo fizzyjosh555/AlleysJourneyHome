@@ -64,13 +64,13 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetAxisRaw("Horizontal") > 0f)
                 {
                     myRigidBody.velocity = new Vector2(moveSpeed, myRigidBody.velocity.y);
-                    transform.localScale = new Vector2(5, 5);
+                    transform.localScale = new Vector2(1, 1);
                 }
 
                 else if (Input.GetAxisRaw("Horizontal") < 0f)
                 {
                     myRigidBody.velocity = new Vector2(-moveSpeed, myRigidBody.velocity.y);
-                    transform.localScale = new Vector2(-5, 5);
+                    transform.localScale = new Vector2(-1, 1);
                 }
 
                 else
