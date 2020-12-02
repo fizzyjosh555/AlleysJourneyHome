@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public bool isGrounded;
 
-    public int curHealth;
-    public int maxHealth = 3;
+    public static int curHealth;
+    public int maxHealth = 5;
 
     public float knockback;
     public float knockbackLength;
@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
         theLevelManager = FindObjectOfType<LevelManager>();
         myAnim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
-        curHealth = maxHealth;
     }
 
     void Update()
@@ -97,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
         curHealth = maxHealth;
     }
 
@@ -123,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.tag == "KillPlane")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         else if (other.tag == "Coin")
         {

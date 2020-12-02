@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private PlayerController player;
-    public int coinCount;
+    public static int coinCount;
     public Text coinText;
     void Start()
     {
@@ -16,12 +16,12 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        coinText.text = "Coins: " + coinCount;
+        coinText.text = "Score: " + coinCount;
     }
 
     public void AddCoins(int coinsToAdd)
     {
         coinCount = coinCount + coinsToAdd;
-        coinText.text = "Coins: " + coinCount;
+        coinText.text = "Score: " + coinCount;
     }
 }
